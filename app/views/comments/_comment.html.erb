@@ -1,0 +1,10 @@
+User:  <%= comment.commenter %> <br>
+<i>   At: <%= comment.created_at %>  </i>
+
+<% #[comment.post , comment]     %>
+
+<small>  <%= link_to "Delete" , [comment.post,comment] , :method => :delete  %> </small>
+
+<br/>
+Comment: <%= comment.body %>
+<hr/>

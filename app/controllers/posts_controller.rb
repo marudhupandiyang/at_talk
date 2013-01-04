@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  http_basic_authenticate_with :name => "marudhu" , :password =>  'devbrother' , :only =>  [:create,:edit,:destroy ]
+
   def index
     @posts = Post.all
 

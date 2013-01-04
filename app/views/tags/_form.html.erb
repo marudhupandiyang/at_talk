@@ -1,0 +1,16 @@
+<%= form.fields_for :tags do |tag| %>
+
+    <div class="field">
+            <%= tag.label :name %>
+            <%= tag.text_field :name %>
+    </div>
+
+    <% unless tag.object.nil? || tag.object.new_record?  %>
+        <div class="field">
+                <%= tag.label :_destroy , 'Remove: ' %>
+                <%=  tag.check_box :_destroy %>
+        </div>
+
+    <% end  %>
+
+<% end  %>
